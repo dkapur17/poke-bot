@@ -16,7 +16,7 @@ client.on('message', msg => {
     tokens = msg.content.split(' ');
     if (tokens[0] === 'pb') {
         if (tokens.length === 1)
-            msg.reply(helpMessage);
+            msg.channel.send(helpMessage);
         else
             for (let i = 1; i < tokens.length; i++) {
                 pokemon = tokens[i].toLowerCase();
